@@ -353,6 +353,14 @@
 @media screen and (max-width:600px) and (min-width:0px){
     .photography{
 
+        &__title{
+            gap: 1em;
+        }
+
+        &-subtitle{
+            font-size: 2rem;
+        }
+
         &__card-img{
             height: 22em;
         }

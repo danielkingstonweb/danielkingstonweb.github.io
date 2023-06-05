@@ -3,7 +3,6 @@
     position: relative;
 
     &-main{
-        height: 80vh;
         @include center-flex;
         flex-direction: column;
         gap: 5em;
@@ -88,7 +87,7 @@
         width: 100%;
         @include rowFlex;
         justify-content: space-between;
-        height: 80%;
+        height: 80vh;
     }
     
     &-left{
@@ -172,4 +171,16 @@
         }
     }
 
+}
+
+@media screen and (max-width:900px) and (min-width:0px){
+    .projects{
+        &__heading{
+            gap: 1em;
+        }
+
+        &-subtitle{
+            font-size: 2rem;
+        }
+    }
 }
