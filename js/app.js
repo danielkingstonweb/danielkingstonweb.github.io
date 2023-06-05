@@ -32,7 +32,7 @@ const projects = [
 },
 {
     id: 202,
-    title: `Ms Johnson's.`,
+    title: `Ms. Johnson's`,
     links: [''],
     linkDescription: '',
     description: `I made Ms Johnson's Flamin' Hot Vulva Sauce as a birthday gift for someone very dear. The illustrations and some of the copy have been taken from various books and magazines I collect for collage, I've worked these assets into a cohesive design with a simple yet effective colour scheme. I've also scanned in my own textures for this. I decided to include this as I think that it shows an ability to visualize and create packaging but more so that it represents the beauty & fun that I find in design, also I enjoyed making & bottling the hot sauce (it's quite good).`,
