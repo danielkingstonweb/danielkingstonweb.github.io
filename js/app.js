@@ -252,8 +252,6 @@ function reveal() {
   }
 }
 
-// reveal();
-
 // Load animations end
 
 // ! Running through Photo Array 
@@ -261,8 +259,6 @@ function postPhotography(){
 
     let i = 0;
     for(i = 0; i < photography.length; i++){
-        console.log(photography[i].id);
-        // if (photography[i].id === 103){
 
           
         document.getElementById("photographyContent").innerHTML += `
@@ -279,7 +275,6 @@ function postPhotography(){
         </button>
         
         `;
-    // }
     }
 }
 
@@ -290,12 +285,9 @@ const cards = document.querySelectorAll('.photography__card');
 // ! Individual Photo Hide Show
 
 function photoHideShow(){
-// console.log('hello');
     let i = 0;
     for(i = 0; i < photography.length; i++){
-        // console.log(photography[i].id);
         if (parseInt(this.id) === photography[i].id){
-            console.log(this.id);
 
             const images = photography[i].images;
             document.getElementById('galleryInfo').innerHTML =`
@@ -321,8 +313,6 @@ function photoHideShow(){
             
 
             for(image of images){
-              // console.log(images);
-              console.log(image);
 
               document.getElementById('gallery').innerHTML +=`
               <img src="${image}" alt="" class="gallery-img">
@@ -356,20 +346,14 @@ function photoHideShow(){
     });
 
 }
-
-
-// if(cards){
   cards.forEach(photography__card => {
     photography__card.addEventListener('click', photoHideShow)
   });
-// }
 
 function postProjects(){
 
   let i = 0;
   for(i = 0; i < projects.length; i++){
-      console.log(projects[i].id);
-      // if (projects[i].id === 203){
       
       document.getElementById("projectsList").innerHTML += 
       `
@@ -393,7 +377,6 @@ const projectsSingle = document.querySelectorAll('.projects__single');
 function postProjectsPhoto(){
   let i = 0;
   for(i = 0; i < projects.length; i++){
-      console.log(this.id);
 
       if (parseInt(this.id) == projects[i].id){
 
@@ -405,7 +388,6 @@ function postProjectsPhoto(){
 function singleProject(){
   let i = 0;
   for(i = 0; i < projects.length; i++){
-      // console.log(this.id);
 
       if (parseInt(this.id) == projects[i].id){
 
@@ -487,12 +469,10 @@ projectsSingle.forEach(projects__single => {
 
 // Hamburger Click Function
 function hamburgerNavToggle(){
-  console.log('bruuh');
   hamburger.addEventListener('click', function(){
       this.classList.toggle('is-active');
       nav.classList.toggle('reveal-nav');
       navMenu.classList.toggle('nav-reveal-items');
-      // logo.classList.toggle('navigation__logo-alt');
   })
 }
 
@@ -569,7 +549,7 @@ let activeSection = 'landingSection';
 
 
 function toggleSections(sectionIds, sectionToShow) {
-  console.log('heyBro');
+  console.log('heyBro hope ur enjoying the site x');
   for (let i = 0; i < sectionIds.length; i++) {
     let section = document.getElementById(sectionIds[i]);
     if (section.id === sectionToShow) {
@@ -615,7 +595,6 @@ let singlePhotoSection = document.getElementById("singlePhotoSection");
 singlePhotoSection.classList.add("hidden");
 
 function toggleSectionsTwo() {
-  console.log('BruhPleaseWork');
   let photographyMain = document.getElementById("photographyMain");
   
   photographyMain.classList.toggle("hidden");
@@ -630,7 +609,6 @@ let singleProjectSection = document.getElementById("singleProjectSection");
 singleProjectSection.classList.add("hidden");
 
 function toggleSectionsThree() {
-  console.log('BruhPleaseWork');
   let projectsMain = document.getElementById("projectsMain");
   
   projectsMain.classList.toggle("hidden");
