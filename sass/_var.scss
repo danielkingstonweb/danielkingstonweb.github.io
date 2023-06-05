@@ -8,6 +8,18 @@ $accent3: #080877;
 
 
 // ! Fonts
+
+@font-face{
+    font-family: "Gogh";
+    src: url("../fonts/gogh/Gogh-ExtraBold.otf"),
+    url("../fonts/gogh/Gogh-ExtraBoldItalic.otf");
+}
+
+@font-face {
+    font-family: 'Barbarella';
+    src: url("../fonts/gogh/Barbarella.otf");
+}
+
 $displayFont: 'Gogh', sans-serif;
 $displayAlt: 'Barbarella', sans-serif;
 $bodyfont: 'Montserrat Alternates', sans-serif;
