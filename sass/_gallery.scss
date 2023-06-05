@@ -1,0 +1,72 @@
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin: 0 1em;
+
+    &-img{
+        width: 100%;
+        cursor: pointer;
+        transition: 0.3s all ease;
+    }
+
+    &-img:hover {
+        transform: scale(0.9);
+      }
+
+      .modal {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        z-index: 1;
+        overflow: auto;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 200;
+      }
+
+        .modal-content {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 200;
+          }
+          .modal-img {
+            width: 80%;
+            max-width: 800px;
+          }
+          .modal-txt {
+            margin-top: 1em;
+          }
+          .close {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 3em;
+            cursor: pointer;
+            z-index: 1000;
+          }
+          .modal.appear {
+            opacity: 1;
+            pointer-events: all;
+          }
+          .modal.appear .modal-img,
+          .modal.appear .modal-txt {
+            animation: zoom 0.3s linear;
+          }
+          @keyframes zoom {
+            from {
+              transform: scale(0);
+            }
+            to {
+              transform: scale(1);
+            }
+          }
+}

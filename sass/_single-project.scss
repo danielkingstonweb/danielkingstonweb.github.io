@@ -1,0 +1,212 @@
+.single-project{
+    // padding-top: 15vh;
+
+    &__anchor{
+        margin-bottom: 10em;
+    }
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        align-items: center;
+        padding: 0% 5%;
+        position: relative;
+        background: var(--primary);
+    }
+
+    &__heading{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-heading{
+        text-align: center;
+        font-family: $displayFont;
+        font-size: 4rem;
+        color: var(--secondary);
+        flex-basis: 30%;
+    }
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+    }
+
+    &-back{
+        flex-basis: 30%;
+    }
+
+    &-back-alt{
+        flex-basis: 30%;
+    }
+
+    &-btn{
+        background: none;
+        border: none;
+        display: flex;
+        gap: 1em;
+        font-size: 2rem;
+        font-family: $bodyfont;
+        color: var(--secondary);
+        cursor: pointer;
+        
+    }   
+
+    &-btn:hover{
+        color: $accent2;
+        transition: 0.2s ease-in;
+    }
+
+    &-intro{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        gap: 3em;
+        border-style: solid;
+        border-color: var(--secondary);
+        padding: 5em;
+    }
+
+    &-left{
+        font-family: $bodyfont;
+        font-weight: 500;
+        color: var(--secondary);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        flex-basis: 55%;
+        font-size: 1.6rem;
+    }
+
+    &-div{
+        border-style: solid;
+        border-color: var(--secondary);
+    }
+
+    &-right{
+        font-family: $bodyfont;
+        font-weight: 500;
+        flex-basis: 40%;
+        font-size: 1.6rem;
+        color: var(--secondary);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: right;
+    }
+
+    &-link{
+        color: var(--secondary);
+        text-decoration: underline;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    &-link{
+        width: fit-content;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+      }
+      
+      &-link::before,
+      &-link::after {
+       content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+      }
+      &-link::before {
+        background-color: $accent2;
+        height: 2px;
+        bottom: 0;
+        transform-origin: 100% 50%;
+        transform: scaleX(0);
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      &-link::after {
+        content: attr(data-replace);
+        height: 100%;
+        top: 0;
+        transform-origin: 100% 50%;
+        transform: translate3d(200%, 0, 0);
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+        color: $accent2;
+      }
+      
+      &-link:hover::before {
+        transform-origin: 0% 50%;
+        transform: scaleX(1);
+      }
+      &-link:hover::after {
+        transform: translate3d(0, 0, 0);
+      }
+      
+      &-link span {
+        display: inline-block;
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      
+      &-link:hover span {
+        transform: translate3d(-200%, 0, 0);
+      }
+
+    &-images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+
+    &-image{
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width:900px) and (min-width:0px){
+
+    .single-project{
+        &-intro{
+            flex-direction: column;
+        }
+
+        &-heading{
+           flex-basis: 80%;
+        }
+    }
+}
+
+
+@media screen and (max-width:600px) and (min-width:0px){
+
+    .single-project{
+
+        &__heading{
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        &-back{
+            align-self: baseline;
+        }
+
+        &-back-alt{
+            display: none;
+        }
+
+        &-heading{
+           flex-basis: 80%;
+        }
+
+        &-intro{
+            padding: 2em;
+        }
+    }
+}

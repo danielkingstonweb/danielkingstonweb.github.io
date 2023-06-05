@@ -1,0 +1,19 @@
+{
+  "name": "myportfolioreup",
+  "version": "1.0.0",
+  "description": "Daniel Kingston's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Kingston",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.0"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.12"
+  }
+}

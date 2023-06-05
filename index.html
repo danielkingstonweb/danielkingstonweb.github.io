@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel's Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/img/logos/browser.png">
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="page light">
+
+<header class="navigation">
+    <a href="index.html" class="navigation__link">
+        <div class="navigation__logo">
+            <!-- <img src="./img/logos/logo.svg" alt="" class="navigation-logo"> -->
+        </div>
+    </a>
+
+
+    <!-- <button class="photography__card">CLICK ME -------------</button> -->
+    <div class="navigation__right">
+        <div class="dark-mode">
+            <input type="checkbox" id="theme" class="dark-mode-input" checked>
+          <label for="theme" class="dark-mode-label">
+            <!-- <img src="./img/lightbulb-regular.svg" > -->
+            <i class="fa-solid fa-lightbulb dark-mode-icon" alt="Dark mode" ></i>
+          </label>
+        </div>
+        <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+    <nav class="nav">
+        <ul class="nav-menu">
+            <li class="nav__item"><a href="#" data-replace="Home" onclick="handleNavClick('landingSection');" class="nav-item"><span>Home</span></a></li>
+            <li class="nav__item"><a href="#" data-replace="Work" onclick="handleNavClick('projectSection');" class="nav-item"><span>Work</span></a></li>
+            <li class="nav__item"><a href="#" data-replace="Photography" onclick="handleNavClick('photographySection');" class="nav-item"><span>Photography</span></a></li>
+            <li class="nav__item"><a href="#" data-replace="Contact | About" onclick="handleNavClick('contactSection');" class="nav-item"><span>Contact | About</span></a></li>
+            <!-- <li class="nav__item"><a href="#" class="nav-item"></a></li> -->
+        </ul>
+    </nav>
+</header>
+
+<!-- CURSOR -->
+
+
+
+<!-- CURSOR ENDS -->
+
+<div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    
+
+</div>
+
+    
+    <!-- LANDING SECTION BEGINS -->
+    <section id="landingSection" class="landing">
+        <div class="landing__intro">
+            <div class="landing__intro-block">
+            <div class="landing__intro-top">
+                <div class="landing__intro-top-left">
+                    <h2 class="landing-intro-top-left fade-in-bottom">Kia ora, I'm Daniel.</h2>
+                </div>
+                <!-- <div class="landing__intro-top-right">
+                    <h1 class="landing__intro-top-right">Daniel!</h1>
+                    <div class="landing__intro-top-right-color"></div>
+                </div> -->
+            </div>
+            <div class="landing__intro-bottom">
+                <div class="landing__intro-bottom-block">
+                    <h2 class="landing__intro-bottom-text fade-in-bottom-1">I'm a Pōneke based</h2>
+                </div>
+            </div>
+        </div>
+        <div class="landing__intro-alt">
+            <div class="landing__intro-alt-block fade-in-bottom-2">
+                <span class="auto-type"></span>
+                <div class="landing__intro-alt-color"></div>
+            </div>
+        </div>
+        <div class="landing__links">
+            <div class="landing__links-top fade-in-bottom-3">
+                <button id="landingContact" data-replace="Let's get in touch" onclick="handleNavClick('contactSection');" class="landing-link landing-link--top"><span>Let's get in touch</span></button>
+            </div>
+            <div class="landing__links-div fade-in-bottom-4"></div>
+            <div class="landing__links-bottom fade-in-bottom-5">
+                <button id="landingWork" data-replace="View my work" onclick="handleNavClick('projectSection');" class="landing-link landing-link--bottom"><span>View my work</span></button>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- LANDING SECTION ENDS -->
+
+    <!-- PHOTOGRAPHY SECTION BEGINS -->
+
+    <section id="photographySection" class="photography hide">
+        <div id="photographyMain" class="photography-main">
+            <div class="photography__title">
+                <h2 class="photography-title fade-in-bottom">A collection of film & digital</h2>
+                <p class="photography-subtitle fade-in-bottom-1">I post a wider variety of work on my <a class="photography-subtitle-link fade-in-bottom-2" href="https://www.instagram.com/miscellaneousimagefile/" target="_blank" rel="noopener noreferrer" data-replace="Instagram"><span>Instagram </span></a><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+            </div>
+            <div class="photography__content fade-in-bottom-3" id="photographyContent">
+            </div>
+        </div>
+
+        <!-- SINGLE PHOTO COLLECTION SECTION STARTS -->
+
+        <section id="singlePhotoSection" class="photography-single">
+            <div class="single-main">
+                <div class="single-left">
+                    <div class="single__back">
+                        <div class="single__btn fade-in-bottom">
+                            <button onclick="toggleSectionsTwo();" class="single-btn">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <p class="single-btn-text">Go Back</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery" id="gallery">
+                        </div>
+                </div> 
+                <div class="single-right">
+                    <div class="single-right-block" id="galleryInfo">
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+            <!-- SINGLE PHOTO COLLECTION SECTION ENDS -->
+
+
+
+    </section>
+
+    <!-- PHOTOGRAPHY SECTION ENDS -->
+
+
+
+
+
+    <!-- PROJECTS SECTION BEGINS -->
+    
+    <section id="projectSection" class="projects hide">
+        <div id="projectsMain" class="projects-main">
+            <div class="projects__heading">
+                <h2 class="projects-heading fade-in-bottom">My Work</h2>
+                <p class="projects-subtitle fade-in-bottom-1">I post a wider variety of work on my <a class="projects-subtitle-link fade-in-bottom-3" href="https://www.instagram.com/miscellaneousimagefile/" target="_blank" rel="noopener noreferrer" data-replace="Instagram"><span>Instagram</span></a><i class="fa-solid fa-arrow-up-right-from-square fade-in-bottom"></i></p>
+            </div>
+            <div class="projects-block">
+                <div class="projects-left">
+                    <div class="projects-photo" id="projectsPhoto"></div>
+                </div>
+                <div class="projects-right">
+                    <div class="projects-list fade-in-bottom-5" id="projectsList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="singleProjectSection" class="single-project hidden">
+            <div class="single-project-main" id="singleProject">
+
+            </div>
+        </section>
+    </section>
+    
+    <!-- PROJECTS SECTION BEGINS -->
+
+
+    <!-- SINGLE PROJECT SECTION BEGINS -->
+
+
+
+    <section id="contactSection" class="contact hide">
+            <div class="contact__heading fade-in-bottom">
+                <h2 class="contact-heading">A little about me</h2>
+            </div>
+            <div class="contact-main">
+                <div class="contact__left">
+                    <div class="about fade-in-bottom-1">
+                        <div class="about__bio">
+                            <p class="about-bio">Hey I'm Daniel! I'm a Graphic & Web Designer, Photographer, & Web Developer based in Wellington. I have graduated with two diplomas, one in Web & Graphic design (Level 5) and the second in Web & UX design (Level 6) </p>
+                        </div>
+                    </div>
+                    <div class="contact__subheading fade-in-bottom-2">
+                        <h2 class="contact-subheading">Let's get in touch</h2>
+                    </div>
+                    <div class="contact__icons">
+                        <div class="contact-icons fade-in-bottom-3">
+                            <a class="contact__block" href="mailto:user@domain.com?Subject=Hello%20User" target="_blank" rel="noopener noreferrer">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <p class="contact-info" data-replace="daniel@kingston.co.nz"><span>daniel@kingston.co.nz</span></p><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a class="contact__block" href="https://www.instagram.com/miscellaneousimagefile/" target="_blank" rel="noopener noreferrer">
+                                <div class="contact-icon"><i class="fa-brands fa-square-instagram"></i></div>
+                                <p class="contact-info" data-replace="@miscellaneousimagefile"><span>@miscellaneousimagefile</span></p><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="contact-icons fade-in-bottom-4">
+                            <a class="contact__block" href="https://github.com/danielkingstonweb" target="_blank" rel="noopener noreferrer">
+                                <div class="contact-icon"><i class="fa-brands fa-square-github"></i></div>
+                                <p class="contact-info" data-replace="@danielkingstonweb"><span>@danielkingstonweb</span></p><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a class="contact__block" href="https://www.linkedin.com/in/daniel-kingston-aa200b255/" target="_blank" rel="noopener noreferrer">
+                                <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <p class="contact-info" data-replace="Daniel Kingston"><span>Daniel Kingston</span></p><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="contact__right fade-in-bottom-1">
+                <div class="contact__img">
+                    <img src="./img/danielHeadshot.jpg" alt="" class="contact-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+
+
+    <!-- SINGLE PROJECT SECTION ENDS -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/c15fcd11ab.js" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

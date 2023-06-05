@@ -1,0 +1,27 @@
+// ! Colour Palette
+$primary: #EAE3D3;
+$white: #f4f4f4; 
+$black: #030303;
+$accent1: #E01606;
+$accent2: #FAA907;
+$accent3: #080877;
+
+
+// ! Fonts
+$displayFont: 'Gogh', sans-serif;
+$displayAlt: 'Barbarella', sans-serif;
+$bodyfont: 'Montserrat Alternates', sans-serif;
+
+
+// ! Nav Width
+$hamWidth: 5em;
+$hamHeight: 0.6em;
+$hamSpacing: calc( $hamWidth / 4);
+
+// ! Media Queries Begin
+
+$largeScreen: 20;
+$desktop: 20;
+$tablet: 20;
+$mobile: 20;
+$smallerScreen: 20;
