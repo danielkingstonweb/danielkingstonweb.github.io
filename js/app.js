@@ -148,7 +148,7 @@ const projects = [
   images: ['./img/projects/frank/clear1.png',],
   showAll:'All'
 },
-{
+// {
 //   id: 210,
 //   title: 'NOVA Poster',
 //   links: [''],
