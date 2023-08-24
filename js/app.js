@@ -25,6 +25,8 @@ const projects = [
     description: `Earthenwares is a fullstack application created in a group. It's an e-commerce website created to sell pottery targeted at local potters. It included an extensive research & design phase followed by the coding phase.`,
     realm: ['Web/UX Design', 'Front-End Development', 'Back-End Development'],
     tools: ['HTML', 'CSS(Sass)', 'JS', 'jQuery', 'Gulp', 'MongoDB', 'Postman', 'nodeJS', 'Figma', 'Adobe Suite'],
+    colourPalette: [],
+    typeFaces: [],
     images: ['./img/projects/earthenwares/clear1.png',
     './img/projects/earthenwares/clear2.png',
     './img/projects/earthenwares/clear3.png'],
@@ -38,6 +40,8 @@ const projects = [
     description: `I made Ms Johnson's Flamin' Hot Vulva Sauce as a birthday gift for someone very dear. The illustrations and some of the copy have been taken from various books and magazines I collect for collage, I've worked these assets into a cohesive design with a simple yet effective colour scheme. I've also scanned in my own textures for this. I decided to include this as I think that it shows an ability to visualize and create packaging but more so that it represents the beauty & fun that I find in design, also I enjoyed making & bottling the hot sauce (it's quite good).`,
     realm: ['Graphic Design'],
     tools: ['Adobe Suite', 'Manual Collage'],
+    colourPalette: [],
+    typeFaces: [],
     images: ['./img/projects/msJohnsons/clear1.png'],
     showAll:'All'
 },
@@ -49,6 +53,8 @@ const projects = [
   description: `Revulva is a local Wellington band that I've been doing some design for, starting with their Album Liners and continuing business with multiple event posters`,
   realm: ['Graphic Design'],
   tools: ['Adobe Suite'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/revulva/clear1.png',
   './img/projects/revulva/clear2.png',
   './img/projects/revulva/clear3.png'],
@@ -62,6 +68,8 @@ const projects = [
   description: `I was entrusted with the design work for Revulva's first nationwide tour, the tour was themed around their single 'This Town'. This was a really fun opportunity to create a cohesive set of works that speak to each other and the audience collectively. Dressing and shooting each of the band and incorporating them into a mix of print & digital designs balancing the western chic and the colourful and playful flair that makes Revulva what they are.`,
   realm: ['Graphic Design'],
   tools: ['Adobe Suite'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/thisTownTour/clear1.png',
   './img/projects/thisTownTour/clear2.png',
   './img/projects/thisTownTour/clear3.png',
@@ -79,6 +87,8 @@ const projects = [
   description: `This website is a fully responsive Wordpress Custom Theme written in PHP with Woocommerce for the storefront. The purpose of this website is to display and sell the artists work. Many aspects of the site are customizable such as the colour scheme, landing page images etc. There are also custom post types for upload new work.`,
   realm: ['Web/UX Design', 'Front-End Development', 'Wordpress'],
   tools: ['HTML', 'CSS(Sass)', 'JS', 'jQuery', 'PHP', 'Laravel Mix', 'Figma', 'Adobe Suite'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/warrender/clear1.png',
   './img/projects/warrender/clear2.png',
   './img/projects/warrender/clear3.png',
@@ -93,6 +103,8 @@ const projects = [
   description: `This is a table-side ordering system designed for Dirty Burger. At it's core this is a design project based much more in the frontend with limited actual functionality. It is designed for an iPad pro 12.9". Please note that this is not a real client of mine but a project completed while studying`,
   realm: ['Web/UX Design', 'Front-End Development',],
   tools: ['HTML', 'CSS(Sass)', 'JS', 'jQuery', 'Figma', 'Adobe Suite'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/dirtyburger/clear1.png',
   './img/projects/dirtyburger/clear2.png',],
   showAll:'All'
@@ -105,6 +117,8 @@ const projects = [
   description: `Rites of Passage is a coming of age production put on by Long Cloud Youth Theatre - this poster was produced in A1 print and the social tiles present on Facebook & Instagram. I also took the photo assets present in the poster`,
   realm: ['Graphic Design', 'Photography'],
   tools: ['Adobe Suite', 'Digital Photography'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/riteOfPassage/clear1.png',],
   showAll:'All'
 },
@@ -116,6 +130,8 @@ const projects = [
   description: `The Gilded Lily is an event poster for a Wellington Jazz Festival Event`,
   realm: ['Graphic Design'],
   tools: ['Adobe Suite'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/gildedLily/gildedLily.png',],
   showAll:'All'
 },
@@ -127,9 +143,37 @@ const projects = [
   description: `Frank on Tap are a local Wellington band, these are some variations on an event poster I've completed for them`,
   realm: ['Graphic Design'],
   tools: ['Adobe Suite'],
+  colourPalette: [],
+  typeFaces: [],
   images: ['./img/projects/frank/clear1.png',],
   showAll:'All'
 },
+{
+//   id: 210,
+//   title: 'NOVA Poster',
+//   links: [''],
+//   linkDescription: '',
+//   description: `Frank on Tap are a local Wellington band, these are some variations on an event poster I've completed for them`,
+//   realm: ['Graphic Design'],
+//   tools: ['Adobe Suite'],
+//   colourPalette: [],
+//   typeFaces: [],
+//   images: ['./img/projects/frank/clear1.png',],
+//   showAll:'All'
+// },
+// {
+//   id: 211,
+//   title: 'NOVA EP',
+//   links: [''],
+//   linkDescription: '',
+//   description: `Frank on Tap are a local Wellington band, these are some variations on an event poster I've completed for them`,
+//   realm: ['Graphic Design'],
+//   tools: ['Adobe Suite'],
+//   colourPalette: [],
+//   typeFaces: [],
+//   images: ['./img/projects/frank/clear1.png',],
+//   showAll:'All'
+// },
 ]
 
 const photography = [
@@ -357,11 +401,26 @@ function postProjects(){
       
       document.getElementById("projectsList").innerHTML += 
       `
-      <div class="projects__single-div"></div>
-      <button class="projects__single" onclick="toggleSectionsThree();" id="${projects[i].id}">
+      
+      <button class="projects__single" 
+      onclick="toggleSectionsThree();" id="${projects[i].id}">
+      
+      <div class="projects__single-top">
+      <div class="projects-photo" id="projectsPhoto">
+      <img src="${projects[i].images[0]}" alt="" class="projects-card-image">
+      </div>
+      </div>
+
+      <div class="projects__single-bottom">
       
         <h3 class="projects__single-title">${projects[i].title}</h3>
         <p class="projects__single-medium">${projects[i].realm.join(' | ')}</p>
+        </div>
+        <div class="go-corner" href="#">
+        <div class="go-arrow">
+          →
+        </div>
+      </div>
         
       </button>
       `;
@@ -374,16 +433,16 @@ postProjects();
 
 const projectsSingle = document.querySelectorAll('.projects__single');
 
-function postProjectsPhoto(){
-  let i = 0;
-  for(i = 0; i < projects.length; i++){
+// function postProjectsPhoto(){
+//   let i = 0;
+//   for(i = 0; i < projects.length; i++){
 
-      if (parseInt(this.id) == projects[i].id){
+//       if (parseInt(this.id) == projects[i].id){
 
-      document.getElementById("projectsPhoto").style.backgroundImage =`url(${projects[i].images[0]})`;
-      }
-    }
-}
+//       document.getElementById("projectsPhoto").style.backgroundImage =`url(${projects[i].images[0]})`;
+//       }
+//     }
+// }
 
 function singleProject(){
   let i = 0;
@@ -455,9 +514,13 @@ function singleProject(){
     }
 }
 
-projectsSingle.forEach(projects__single => {
-  projects__single.addEventListener('mouseover', postProjectsPhoto)
-});
+// ! Hover for project section OLD
+
+// projectsSingle.forEach(projects__single => {
+//   projects__single.addEventListener('mouseover', postProjectsPhoto)
+// });
+
+// ! Hover for project section OLD ENDS
 
 projectsSingle.forEach(projects__single => {
   projects__single.addEventListener('click', singleProject)
