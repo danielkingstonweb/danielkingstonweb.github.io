@@ -20,13 +20,25 @@
         gap: 0.5em;
     }
 
+    &__heading{
+        a{
+            color: var(--secondary);
+        }
+
+    }
+
     &-subtitle{
         font-family: $bodyfont;
         font-size: 3rem;
         font-weight: bold;
         display: flex;
+        // flex-direction: row;
         justify-content: center;
         gap: 0.5em;
+
+        &:hover a{
+            color: $accent2;
+        }
     }
 
     &-subtitle-link{

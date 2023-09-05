@@ -12,7 +12,8 @@
 .single-project-prompt{
     font-size: 2rem;
     font-family: $bodyfont;
-    color: var(--secondary);
+    color: $accent2;
+	border-bottom: solid 1px;
 
 }
 .scroll-prompt {
@@ -34,8 +35,8 @@
 	.scroll-prompt-arrow > div {
 		width: 16px;
 		height: 16px;
-		border-right: 2px solid var(--secondary);
-		border-bottom: 2px solid var(--secondary);
+		border-right: 2px solid $accent2;
+		border-bottom: 2px solid $accent2;
 		transform: rotate(45deg) translateZ(5px);
 	}
 }

@@ -10,6 +10,7 @@
         gap: 5em;
         align-items: center;
         padding: 0% 5%;
+        padding-top: 5em;
         position: relative;
         background: var(--primary);
     }
@@ -25,16 +26,13 @@
     &-heading{
         text-align: center;
         font-family: $displayFont;
-        font-size: 4rem;
+        // font-size: 4rem;
+        font-size: calc(1.8rem + 2vw);
         color: var(--secondary);
         flex-basis: 30%;
     }
 
-    &-content{
-        display: flex;
-        flex-direction: column;
-        gap: 5em;
-    }
+
 
     &-back{
         flex-basis: 30%;
@@ -61,50 +59,165 @@
         transition: 0.2s ease-in;
     }
 
-    &-intro{
+    // ! Old styling begins
+
+    // &-content{
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 5em;
+    // }
+
+    // &-intro{
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     align-content: center;
+    //     gap: 3em;
+    //     border-style: solid;
+    //     border-color: var(--secondary);
+    //     padding: 5em;
+    // }
+
+    // &-left{
+    //     font-family: $bodyfont;
+    //     font-weight: 500;
+    //     color: var(--secondary);
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 1em;
+    //     flex-basis: 55%;
+    //     font-size: 1.6rem;
+    // }
+
+    // &-div{
+    //     border-style: solid;
+    //     border-color: var(--secondary);
+    // }
+
+    // &-right{
+    //     font-family: $bodyfont;
+    //     font-weight: 500;
+    //     flex-basis: 40%;
+    //     font-size: 1.6rem;
+    //     color: var(--secondary);
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 1em;
+    //     text-align: right;
+    // }
+
+    // &-images{
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     gap: 3em;
+    // }
+
+    // &-image{
+    //     width: 90%;
+    //     height: auto;
+    // }
+
+    // ! Old Styling Ends
+
+    // ! NEW STYLING BEGINS
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+        gap: 8em;
+        justify-content: center;
+    }
+
+    &-section{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
+        gap: 5em;
+
+        &--reverse{
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__img{
+        flex-basis: 70%;
+    }
+
+    &-img{
+        width: 100%;
+        height: auto;
+    }
+
+    &__copy{
+        flex-basis: 30%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         gap: 3em;
-        border-style: solid;
-        border-color: var(--secondary);
-        padding: 5em;
+
+        &--right{
+            text-align: right;
+        }
     }
 
-    &-left{
-        font-family: $bodyfont;
-        font-weight: 500;
-        color: var(--secondary);
+
+
+    &-block{
         display: flex;
         flex-direction: column;
         gap: 1em;
-        flex-basis: 55%;
-        font-size: 1.6rem;
     }
 
-    &-div{
-        border-style: solid;
-        border-color: var(--secondary);
-    }
-
-    &-right{
+    &-body{
         font-family: $bodyfont;
         font-weight: 500;
-        flex-basis: 40%;
-        font-size: 1.6rem;
         color: var(--secondary);
+        font-size: 1.6rem;
+        padding-left: 1em;
+        border-left: solid 1px var(--secondary);
+
+        &--right{
+            padding-left: 0;
+            padding-right: 1em;
+            border-left: none;
+            border-right: solid 1px var(--secondary);
+        }
+    }
+
+    &-title{
+        font-family: $displayFont;
+        color: var(--secondary);
+        font-size: 4rem;
+    }
+
+    &-gallery{
+        margin-top: 5em;
         display: flex;
         flex-direction: column;
-        gap: 1em;
-        text-align: right;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        padding-bottom: 10vh;
+
+        &-img{
+            width: 90%;
+        }
     }
+
+
+
+    // ! NEW STYLING ENDS
+
 
     &-link{
+        font-family: $bodyfont;
+        font-size: 1.6rem;
+        font-weight: 500;
         color: var(--secondary);
         text-decoration: underline;
         font-style: italic;
-        font-weight: bold;
+        // font-weight: bold;
     }
 
     &-link{
@@ -156,31 +269,22 @@
         transform: translate3d(-200%, 0, 0);
       }
 
-    &-images{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3em;
-    }
 
-    &-image{
-        width: 90%;
-        height: auto;
-    }
 }
 
 
-@media screen and (max-width:900px) and (min-width:0px){
+@media screen and (max-width:1200px) and (min-width:0px){
 
-    .single-project{
-        &-intro{
-            flex-direction: column;
-        }
-
-        &-heading{
-           flex-basis: 80%;
-        }
+    .single-project-section{
+      flex-direction: column;
     }
+}
+
+@media screen and (max-width:1200px) and (min-width:0px){
+
+  .single-project-heading{
+    font-size: 4rem;
+  }
 }
 
 
@@ -207,6 +311,10 @@
 
         &-intro{
             padding: 2em;
+        }
+
+        &-title{
+          font-size: 3rem;
         }
     }
 }
